@@ -1,5 +1,3 @@
-import match
-
 print("****** Power Calculator ******")
 
 number_first = float(input("Enter the firs number: "))
