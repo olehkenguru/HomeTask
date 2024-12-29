@@ -10,4 +10,4 @@ second_list = main_list[half_list:]
 
 result_list = [first_list, second_list]
 
-print( f"{main_list} => {result_list}")
+print(f"{main_list} => {result_list}")
