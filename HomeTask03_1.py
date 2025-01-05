@@ -19,5 +19,6 @@ match action_numbers:
     case _:
         result = "Something wrong."
 
+
 print(f"Result: {number_first} {action_numbers} {number_second} = {result}")
 
