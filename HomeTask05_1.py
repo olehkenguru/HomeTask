@@ -1,6 +1,6 @@
 import string, keyword
 
-possible_name = 'assert_exception' # input('Enter the name of variable: ')
+possible_name = input('Enter the name of variable: ')
 
 prohibited_characters = set(string.punctuation.replace('_', ' '))
 prohibited_words = keyword.kwlist
