@@ -5,6 +5,10 @@ possible_name = input('Enter the name of variable: ')
 prohibited_characters = set(string.punctuation.replace('_', ' '))
 prohibited_words = keyword.kwlist
 
+if len(possible_name) == 0:
+    print(f'FALSE: The empty is not allowed.')
+    exit()
+
 if possible_name[0].isdigit():
     print(f'FALSE: First symbol "{possible_name[0]}" is not allowed.')
     exit()
@@ -23,7 +27,7 @@ for i in prohibited_words:
         exit()
 
 for i in range(len(possible_name) - 1):
-    if possible_name[i] == possible_name[i + 1] and possible_name[i] == '_':
+    if (i > 0 and possible_name[i] == '_' and possible_name[i + 1] == '_') or possible_name == '__':
         print(f'FALSE: The symbol "_" repeated.')
         exit()
 
