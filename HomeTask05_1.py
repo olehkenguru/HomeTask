@@ -22,8 +22,9 @@ for i in prohibited_words:
         print(f'FALSE: The word "{i}" is not allowed.')
         exit()
 
-if len(possible_name.replace("_", "")) == 0 and len(possible_name) > 1:
-    print(f'FALSE: The word "{possible_name}" is not allowed.')
-    exit()
+for i in range(len(possible_name) - 1):
+    if possible_name[i] == possible_name[i + 1] and possible_name[i] == '_':
+        print(f'FALSE: The symbol "_" repeated.')
+        exit()
 
 print(f'TRUE: The word "{possible_name}" is allowed. Congratulations!')
