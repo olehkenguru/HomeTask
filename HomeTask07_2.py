@@ -3,8 +3,8 @@ def correct_sentence(text):
     text = ''.join(
         sentence.strip()[0].upper() + sentence.strip()[1:] + '. '
         for sentence in sentences
-        if sentence.strip()
+        if sentence
     )
     return text.strip()
 
-print(correct_sentence("greetings, friends. Blablabla. hello, world"))
+print(correct_sentence("hello, world. bye"))
