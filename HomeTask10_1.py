@@ -1,6 +1,7 @@
 from inspect import isgenerator
 
-def pow(x):
+# pow перейменував, бо це ім'я зарезервовано
+def pow_func(x):
     return x ** 2
 
 def some_gen(begin, end, func):
@@ -20,7 +21,7 @@ def some_gen(begin, end, func):
         begin = func(begin)
 
 
-gen = some_gen(2, 4, pow)
+gen = some_gen(2, 4, pow_func)
 
 
 print(list(gen))
