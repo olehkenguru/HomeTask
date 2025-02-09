@@ -31,10 +31,8 @@ class Purchase:
         self.products[item] = cnt
 
     def __str__(self):
-        description_cart =  f"User: {str(self.user)}\nItems:\n"
-        for item in self.products:
-            description_cart += f'{item.name}, {self.products[item]} pcs.\n'
-        return description_cart[:len(description_cart)-1]
+        items = "\n".join(f"{item.name}, {self.products[item]} pcs." for item in self.products)
+        return f"User: {self.user}\nItems:\n{items}"
 
     def get_total(self):
         return sum(item.price * self.products[item] for item in self.products)
