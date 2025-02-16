@@ -53,7 +53,7 @@ class Group:
 gr = Group('PD1')
 
 try:
-    for i in range(11):  # Додаємо 11 студентів
+    for i in range(11):
         gr.add_student(Student('Male', 20 + i, f'Name {i}', f'Last name {i}', f'Record_{i}'))
 except GroupLimitError as e:
     print(f"Exception: {e}")
