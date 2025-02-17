@@ -28,9 +28,7 @@ class Group:
         self.group.add(student)
 
     def find_student(self, last_name):
-        find_student = next((s for s in self.group if s.last_name == last_name), None)
-        if find_student:
-            return find_student
+        return next((s for s in self.group if s.last_name == last_name), None)
 
     def delete_student(self, last_name):
         deleted_student = self.find_student(last_name)
